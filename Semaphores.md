@@ -14,7 +14,7 @@ aliases:
 
 # Operations
 
-These operations are 
+[[Modern Operating Systems - Andrew S Tanenbaum Herbert Bos#^hu7t11we8k|These operations are atomic]], uninterruptible during their execution,  [[Atomic actions alleviates concurrency issues|in order to prevent concurrency issues]] within them.
 
 ## Wait / down (*proberen*)
 
@@ -35,5 +35,8 @@ Increments the value of the [[Semaphores|semaphore]].
 
 ---
 # References
+
+- [[Modern Operating Systems - Andrew S Tanenbaum Herbert Bos|Modern Operating Systems]]
+- [[COMP3231]]
 
 [^1]: How does this differ from a [[Lock|lock variable]]?
