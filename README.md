@@ -1,1 +1,8 @@
-Just a bunch of notes. I should probably add a proper homepage/index style note as the README later.
+# Shortcuts cheatsheet
+
+> [!tip]
+>  On macOS, substitute `Ctrl` with `Cmd`.
+
+| Shortcut | Action                    |
+| -------- | ------------------------- |
+| `Ctrl-C` | Create a new lecture note |

@@ -1,6 +1,6 @@
 ---
 type: Lecture note
-course: 
+course: <% tp.file.title.split(" ")[0] %>
 tags:
   - lecture
 created: <% tp.file.creation_date() %>
