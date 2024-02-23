@@ -1,4 +1,4 @@
-# Shortcuts cheatsheet
+# Shortcuts cheat sheet
 
 > [!tip]
 >  On macOS, substitute `Ctrl` with `Cmd`.
