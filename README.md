@@ -15,3 +15,7 @@
 | Shortcut | Action                   |
 | -------- | ------------------------ |
 | `Ctrl-F` | Search the entire vault. |
+
+# Notes
+
+Notes titled `Test` are just there to add the directory to the Git tree, and should be discarded once there are actual notes.
