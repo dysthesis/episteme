@@ -10,7 +10,7 @@ aliases:
   - semaphores
   - Semaphore
 ---
-[[Semaphores]] are variables used to enforce [[Mutual exclusion|mutual exclusion]] for a [[Critical region|critical region]].
+[[Semaphores]] are variables used to enforce [[Mutual exclusion|mutual exclusion]] for a [[Critical region|critical region]]. It describes the number of [[Process|processes]] that can enter a [[Critical region|critical region]] at the given time.[^1]
 
 # Operations
 ## Wait (*proberen*)
@@ -28,6 +28,9 @@ Increments the value of the [[Semaphores|semaphore]].
 # Types
 
 - [[Binary semaphore]]
+- [[Counting semaphore]]
 
 ---
 # References
+
+[^1]: How does this differ from a [[Lock|lock variable]]?
