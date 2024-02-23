@@ -13,13 +13,16 @@ aliases:
 [[Semaphores]] are variables used to enforce [[Mutual exclusion|mutual exclusion]] for a [[Critical region|critical region]]. It describes the number of [[Process|processes]] that can enter a [[Critical region|critical region]] at the given time.[^1]
 
 # Operations
-## Wait (*proberen*)
+
+These operations are 
+
+## Wait / down (*proberen*)
 
 Decrements the value of the [[Semaphores|semaphore]]
 
 - The original Dutch name, *proberen*, means 'to test'.
 
-## Signal (*verhogen*)
+## Signal / up (*verhogen*)
 
 Increments the value of the [[Semaphores|semaphore]].
 
