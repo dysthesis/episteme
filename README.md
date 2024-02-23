@@ -2,8 +2,7 @@
 
 > [!tip]
 >  On macOS, substitute `Ctrl` with `Cmd`.
-
-## Templates
+ ## Templates
 
 | Shortcut       | Action                       |
 | -------------- | ---------------------------- |
@@ -32,6 +31,8 @@
 - **Linking to a heading:** `[[Note#Heading]]`
 - **Linking to a block:** `[[Note^ID]]`
 	- It is not necessary to manually find the block ID. Typing in `[[Note^]]` is sufficient to invoke the completion menu, from which the desired block can be selected.
+- **Aliases:** Entering `[[Note|Alias]]` will result in the name `Alias` being displayed, even though the link points to `Note`.
+	- Frequently used aliases for a note can be added to the `aliases` property of the note, enabling Obsidian to suggest it on the link completion menu.
 
 # Notes
 

@@ -72,3 +72,17 @@ annotation-target: Resources/Textbooks/COMP3231/Modern Operating Systems.pdf
 >%%TAGS%%
 > #os , #concurrency , #COMP3231
 ^ii3gkv6tz5
+
+
+>%%
+>```annotation-json
+>{"created":"2024-02-23T23:28:25.817Z","text":"Definition for a [[process]].","updated":"2024-02-23T23:28:25.817Z","document":{"title":"MODERN OPERATING SYSTEMS, 5e","link":[{"href":"urn:x-pdf:d2fc41488974e845ac0370313ae095aa"},{"href":"vault:/Resources/Textbooks/COMP3231/Modern Operating Systems.pdf"}],"documentFingerprint":"d2fc41488974e845ac0370313ae095aa"},"uri":"vault:/Resources/Textbooks/COMP3231/Modern Operating Systems.pdf","target":[{"source":"vault:/Resources/Textbooks/COMP3231/Modern Operating Systems.pdf","selector":[{"type":"TextPositionSelector","start":278325,"end":278468},{"type":"TextQuoteSelector","exact":"A process is just an instance of an executing program, includ-ing  the  current  values  of  the  program  counter, registers,  and  variables.","prefix":"es, or justprocesses for short. ","suffix":"  Con-ceptually, each  process  "}]}]}
+>```
+>%%
+>*%%PREFIX%%es, or justprocesses for short.%%HIGHLIGHT%% ==A process is just an instance of an executing program, includ-ing  the  current  values  of  the  program  counter, registers,  and  variables.== %%POSTFIX%%Con-ceptually, each  process*
+>%%LINK%%[[#^wjzbzqjcwmd|show annotation]]
+>%%COMMENT%%
+>Definition for a [[process]].
+>%%TAGS%%
+>
+^wjzbzqjcwmd
