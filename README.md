@@ -5,10 +5,11 @@
 
 ## Templates
 
-| Shortcut | Action                       |
-| -------- | ---------------------------- |
-| `Ctrl-C` | Create a new lecture note    |
-| `Ctrl-A` | Create a new assignment note |
+| Shortcut       | Action                       |
+| -------------- | ---------------------------- |
+| `Ctrl-Shift-L` | Create a new lecture note    |
+| `Ctrl-Shift-A` | Create a new assignment note |
+| `Ctrl-Shift-T` | Create a new topic note      |
 
 ## Navigation
 
