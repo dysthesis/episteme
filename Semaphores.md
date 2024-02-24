@@ -30,6 +30,16 @@ Increments the value of the [[Semaphores|semaphore]].
 
 - The original Dutch name, _verhogen_, means to increment.
 
+# Uses
+
+## To enforce mutual exclusion
+
+[[Binary semaphore|Binary semaphores]] can be used to ensure that no two [[Process|processes]] enter a [[Critical region|critical region]] at any given time.
+
+## As a means for synchronisation
+
+[[Counting semaphore|Counting semaphores]] can be used to [[Modern Operating Systems - Andrew S Tanenbaum Herbert Bos#^pbbhz2wxokm|ensure that certain sequences of events do not occur.]] Using the [[Producer-consumer problem]] as an example, [[Counting semaphore|counting semaphores]] can be utilised to keep track of the full and empty buffers, ensuring that the producers do not keep running when the buffer is full and the consumers when the buffer is empty.
+
 # Types
 
 - [[Binary semaphore]]

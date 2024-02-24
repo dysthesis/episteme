@@ -100,3 +100,31 @@ annotation-target: Resources/Textbooks/COMP3231/Modern Operating Systems.pdf
 >%%TAGS%%
 >#os, #concurrency, #COMP3231
 ^vfed0yk0ls
+
+
+>%%
+>```annotation-json
+>{"created":"2024-02-24T03:18:04.075Z","text":"Seems like a queue, where some $n$ slots are available in the counter to serve people concurrently. When someone is done and leaves, they execute an `up` to indicate that the next person can be served. At least, that's my understanding of it. [[Binary semaphores]] would have $n=1$, whereas [[Counting semaphores|counting semaphores]] would have $n\\in\\mathbb Z^+$","updated":"2024-02-24T03:18:04.075Z","document":{"title":"MODERN OPERATING SYSTEMS, 5e","link":[{"href":"urn:x-pdf:d2fc41488974e845ac0370313ae095aa"},{"href":"vault:/Resources/Textbooks/COMP3231/Modern Operating Systems.pdf"}],"documentFingerprint":"d2fc41488974e845ac0370313ae095aa"},"uri":"vault:/Resources/Textbooks/COMP3231/Modern Operating Systems.pdf","target":[{"source":"vault:/Resources/Textbooks/COMP3231/Modern Operating Systems.pdf","selector":[{"type":"TextPositionSelector","start":398112,"end":398560},{"type":"TextQuoteSelector","exact":"The up operation increments the value of the semaphore addressed. If one (ormore)  processes  were  sleeping  on  that  semaphore,  unable  to  complete  an  earlierdown operation,  one  of  them  is  chosen  by  the  system  (e.g.,  at  random)  and  is  al-lowed to complete its down. After an up on a semaphore with processes sleepingon it, the semaphore will still have the value of 0. However,  there will be one few-er process sleeping on it.","prefix":"eas of computer science as well.","suffix":" The operation of incrementing t"}]}]}
+>```
+>%%
+>*%%PREFIX%%eas of computer science as well.%%HIGHLIGHT%% ==The up operation increments the value of the semaphore addressed. If one (ormore)  processes  were  sleeping  on  that  semaphore,  unable  to  complete  an  earlierdown operation,  one  of  them  is  chosen  by  the  system  (e.g.,  at  random)  and  is  al-lowed to complete its down. After an up on a semaphore with processes sleepingon it, the semaphore will still have the value of 0. However,  there will be one few-er process sleeping on it.== %%POSTFIX%%The operation of incrementing t*
+>%%LINK%%[[#^u5kn66atfz7|show annotation]]
+>%%COMMENT%%
+>Seems like a queue, where some $n$ slots are available in the counter to serve people concurrently. When someone is done and leaves, they execute an `up` to indicate that the next person can be served. At least, that's my understanding of it. [[Binary semaphores]] would have $n=1$, whereas [[Counting semaphores|counting semaphores]] would have $n\in\mathbb Z^+$
+>%%TAGS%%
+>#os, #concurrency, #COMP3231
+^u5kn66atfz7
+
+
+>%%
+>```annotation-json
+>{"created":"2024-02-24T03:32:24.159Z","text":"[[Semaphores]] are used not only to enforce [[Mutual exclusion|mutual exclusion]], but also as a means for synchronisation, ensuring that \"certain sequences of events do not occur.\"","updated":"2024-02-24T03:32:24.159Z","document":{"title":"MODERN OPERATING SYSTEMS, 5e","link":[{"href":"urn:x-pdf:d2fc41488974e845ac0370313ae095aa"},{"href":"vault:/Resources/Textbooks/COMP3231/Modern Operating Systems.pdf"}],"documentFingerprint":"d2fc41488974e845ac0370313ae095aa"},"uri":"vault:/Resources/Textbooks/COMP3231/Modern Operating Systems.pdf","target":[{"source":"vault:/Resources/Textbooks/COMP3231/Modern Operating Systems.pdf","selector":[{"type":"TextPositionSelector","start":403081,"end":403865},{"type":"TextQuoteSelector","exact":"In the example of Fig. 2-28, we have actually used semaphores in two differentways. This difference is important enough to make explicit. The mutex semaphoreis used for mutual exclusion. It is designed to guarantee that only one process at atime will be reading or writing the buffer and the associated variables. This mutualexclusion is required to prevent chaos. We will study mutual exclusion and how toachieve it in the next section.The other use of semaphores is for synchronization. The full and empty sem-aphores are needed to guarantee that certain event sequences do or do not occur. Inthis  case,  they ensure  that  the  producer  stops  running  when  the  buffer  is  full,  andthat the consumer stops running when it is empty. This use is different from mutualexclusion.","prefix":"duling later on in this chapter.","suffix":"The Readers and Writers ProblemT"}]}]}
+>```
+>%%
+>*%%PREFIX%%duling later on in this chapter.%%HIGHLIGHT%% ==In the example of Fig. 2-28, we have actually used semaphores in two differentways. This difference is important enough to make explicit. The mutex semaphoreis used for mutual exclusion. It is designed to guarantee that only one process at atime will be reading or writing the buffer and the associated variables. This mutualexclusion is required to prevent chaos. We will study mutual exclusion and how toachieve it in the next section.The other use of semaphores is for synchronization. The full and empty sem-aphores are needed to guarantee that certain event sequences do or do not occur. Inthis  case,  they ensure  that  the  producer  stops  running  when  the  buffer  is  full,  andthat the consumer stops running when it is empty. This use is different from mutualexclusion.== %%POSTFIX%%The Readers and Writers ProblemT*
+>%%LINK%%[[#^pbbhz2wxokm|show annotation]]
+>%%COMMENT%%
+>[[Semaphores]] are used not only to enforce [[Mutual exclusion|mutual exclusion]], but also as a means for synchronisation, ensuring that "certain sequences of events do not occur."
+>%%TAGS%%
+>#os, #concurrency, #COMP3231
+^pbbhz2wxokm
