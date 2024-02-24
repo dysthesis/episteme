@@ -86,3 +86,17 @@ annotation-target: Resources/Textbooks/COMP3231/Modern Operating Systems.pdf
 >%%TAGS%%
 >
 ^wjzbzqjcwmd
+
+
+>%%
+>```annotation-json
+>{"created":"2024-02-24T03:14:07.044Z","text":"The problem with [[Semaphores|semaphores]] that [[Monitors|monitors]] supposedly solve.","updated":"2024-02-24T03:14:07.044Z","document":{"title":"MODERN OPERATING SYSTEMS, 5e","link":[{"href":"urn:x-pdf:d2fc41488974e845ac0370313ae095aa"},{"href":"vault:/Resources/Textbooks/COMP3231/Modern Operating Systems.pdf"}],"documentFingerprint":"d2fc41488974e845ac0370313ae095aa"},"uri":"vault:/Resources/Textbooks/COMP3231/Modern Operating Systems.pdf","target":[{"source":"vault:/Resources/Textbooks/COMP3231/Modern Operating Systems.pdf","selector":[{"type":"TextPositionSelector","start":424562,"end":424898},{"type":"TextQuoteSelector","exact":"This problem is pointed out to show how careful you must be when using sem-aphores.  One  subtle  error  and  everything  comes  to  a  grinding  halt. It  is  like pro-gramming  in  assembly  language,  only  worse,  because  the  errors  are  race  condi-tions, deadlocks, and other forms of unpredictable and irreproducible behavior.","prefix":" deadlocks in detail in Chap. 6.","suffix":"To  make it easier to write corr"}]}]}
+>```
+>%%
+>*%%PREFIX%%deadlocks in detail in Chap. 6.%%HIGHLIGHT%% ==This problem is pointed out to show how careful you must be when using sem-aphores.  One  subtle  error  and  everything  comes  to  a  grinding  halt. It  is  like pro-gramming  in  assembly  language,  only  worse,  because  the  errors  are  race  condi-tions, deadlocks, and other forms of unpredictable and irreproducible behavior.== %%POSTFIX%%To  make it easier to write corr*
+>%%LINK%%[[#^vfed0yk0ls|show annotation]]
+>%%COMMENT%%
+>The problem with [[Semaphores|semaphores]] that [[Monitors|monitors]] supposedly solve.
+>%%TAGS%%
+>#os, #concurrency, #COMP3231
+^vfed0yk0ls
