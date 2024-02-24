@@ -15,6 +15,9 @@ previewLink: http://books.google.com.au/books?id=9gqnngEACAAJ&dq=9780137618873&h
 isbn10: 013359162X
 isbn13: 9780133591620
 annotation-target: Resources/Textbooks/COMP3231/Modern Operating Systems.pdf
+tags:
+  - book
+  - os
 ---
 
 
