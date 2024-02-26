@@ -1,3 +1,12 @@
+# Setting up
+
+```bash
+export DIR="<the directory where the vault will be stored>"
+git clone git@github.com:dysthesis/episteme $DIR
+git clone git@github.com:dysthesis/obsidian $DIR/.obsidian
+rm -rf $DIR/.obsidian/.git
+```
+
 # Shortcuts cheat sheet
 
 > [!tip]

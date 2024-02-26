@@ -12,6 +12,6 @@ created: 2024-02-26 14:47
 -  [[Deadlock detection is not free]]. Therefore, it is more efficient to prevent it in the first place.
 -  [[Deadlock detection]] can significantly slow down the program by orders of magnitudes.
 - It is also possible to perform [[Deadlock detection for resources with multiple units|deadlock detection for resources with multiple units]]
-- .
+
 ---
 # References
