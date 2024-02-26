@@ -8,6 +8,9 @@ created: 2024-02-26 14:17
 > [!summary]+ Lecture topics
 > - [[Ostrich algorithm]]
 > - [[Deadlock prevention]]
+> 	- [[Resource ordering|Via resource ordering]], which is the most common approach in practice.
+> 	- [[Deadlock detection for resources with multiple units|For resources with multiple units]]
+> - [[Recovery from deadlock]]
 
 # Notes
 
