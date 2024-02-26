@@ -11,6 +11,7 @@ created: 2024-02-26 14:17
 > 	- [[Resource ordering|Via resource ordering]], which is the most common approach in practice.
 > 	- [[Deadlock detection for resources with multiple units|For resources with multiple units]]
 > - [[Recovery from deadlock]]
+> - [[Deadlock avoidance]]
 
 # Notes
 
@@ -20,6 +21,7 @@ created: 2024-02-26 14:17
 > [!info]+ About this section
 > This section should contain questions that may arise during the lecture. If the question gets answered, add the answer(s) here too.
 
+1. How does [[Deadlock prevention]] and [[Deadlock avoidance]] differ?
 
 --- 
 # Summary
