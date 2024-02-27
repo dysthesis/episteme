@@ -7,6 +7,7 @@ created: 2024-02-27 18:22
 ---
 > [!summary]+ Lecture topics
 > - [[Slices]]
+> - [[Lifetime]]
 
 # Notes
  
