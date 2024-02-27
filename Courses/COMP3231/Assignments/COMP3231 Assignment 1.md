@@ -50,7 +50,7 @@ Create a 1-2 minute video explaining the solutions to the coding problems.
 > This assignment is worth **20 marks out of 100** of the overall course grade.
 
 $$
-\text{Mark} = 20\cdot\left(\frac{\text{Coded solution marks}}{14}\right)^{0.7} \cdot\left(\frac{\right)
+\text{Mark} = 20\cdot\left(\frac{\text{Coded solution marks}}{14}\right)^{0.7} \cdot\left(\frac{\text{Video marks}}{6}\right)^{0.3}
 $$
 
 ---
