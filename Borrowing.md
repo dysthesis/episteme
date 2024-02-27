@@ -21,6 +21,8 @@ Only one borrow can be distributed at any point in time, but the value can be mu
 
 Note that this means **the value itself must be declared as mutable.**
 
+Even after the [[Lifetime|lifetime]] of the borrow is over, the mutation persists. What the exclusive borrow *can't* do is change the type.
+
 # Which borrow to use?
 
 The [Rust documentation](https://docs.rs) will tell you whether a library function necessitates the use of exclusive borrows.
