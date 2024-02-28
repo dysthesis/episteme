@@ -10,6 +10,29 @@ created: 2024-02-27 09:53
 > [!important] Due date
 > This assignment is due on **March 8, 16:00**
 
+This assignment is about solving [[Synchronisation|synchronisation]] problems with the [[OS/161]] kernel.
+
+## Setting up
+
+### Clone the source repository
+```bash
+git clone https://<zID>@nw-syd-gitlab.cseunsw.tech/COMP3231/24T1/z8888888-asst1.git asst1-src
+```
+
+### Configure the source 
+```bash
+cd asst1-src
+./configure && bmake && bmake install
+```
+
+### Configure the kernel 
+```bash
+cd asst1-src/kern/conf
+./config ASST1
+```
+
+You should now see an ASST1 directory in the kern/compile directory.
+
 
 
 ---
