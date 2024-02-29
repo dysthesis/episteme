@@ -10,8 +10,7 @@ created: 2024-02-27 09:53
 > [!important] Due date
 > This assignment is due on **March 8, 16:00**
 
-This assignment is about solving [[Synchronisation|synchronisation]] problems with the [[OS/161]] kernel.
-
+This assignment is about solving [[Synchronisation|synchronisation]] problems with the [[OS161]] kernel.
 ## Setting up
 
 ### Clone the source repository
