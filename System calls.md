@@ -26,6 +26,7 @@ To prevent processes from arbitrarily jumping to restricted regions of code, byp
 
 Returns the cause for why the operating system was invoked (*i.e.* to find out what really went wrong).
 
+#### 
 
 ### `c0_status`
 
@@ -52,6 +53,8 @@ Determines whether or not interrupts are enabled.
 ### `c0_epc`
 
 `epc` stands for exception program counter, which is returns the address of the instruction that was about to be executed before an interrupt.
+
+The operating system will restart the instructions here.
 
 ---
 # References
