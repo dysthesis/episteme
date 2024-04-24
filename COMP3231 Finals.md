@@ -176,3 +176,43 @@ One way to solve circular wait would be to set a requirement where they can only
 
 Determine whether the statements below are true or false.
 
+1. The role of an operating systems is to present all the low level details of the computer hardware without any abstraction. **False, the role of the operating system is to abstract away low level details**
+2. The operating system runs in the privileged mode of the microprocessor. **True (If the processor features a privileged mode, then the operation system will use it.)**
+3. An application running in user-mode shares the same stack with the operating system when it runs in kernel mode.  **False, the kernel has a separate stack**
+4. An operating system can enforce security by putting checks in the standard C-library. **False, the operating system is language independent and has no control over the C library which is user code**
+5. Arguments to system calls are placed in registers (or on the stack) based on a mutually defined convention between the OS and user-level applications. **True, otherwise syscalls wouldn't work**
+6. In the three-state process model, and common transition is from ready to blocked. **False, a process can go from blocked to ready but not the other way, it needs to be running to block.**
+7. Co-operative (non-preemptive) multitasking can result in a non-responsive system if an application has an endless loop. **True, in co-operative multitasking, a thread must yield() in order for another thread to take over**
+8. A threading library implementation at user-level (i.e. user-level threads) does not expose the concurrency available in the application to the operating system. **True, the kernel does not know about user-level threads**
+9. Application threading supported by kernel implemented threads (i.e. kernel-level threads) can take advantage of multiple processors if available. **True, the OS can schedule kernel-level threads**
+10. Applications (i.e. user-level code) can synchronise to avoid race conditions by disabling and enabling interrupts. **False, user-level applications can not disable interrupts as this requires privileged mode**
+11. Semaphores can be used to implement mutual exclusion primitives. **True, if initialised to one**
+12. Condition variables are used together with semaphores to manage blocking and waking within the semaphore.
+13. Bankers algorithm can avoid deadlock if the maximum resource requirements of threads are known in advance.
+14. Hold and wait is a practical deadlock prevention strategy.
+15. Sparse files save disk space by not storing the parts of the file that are not written to.
+16. The buffer cache improves write performance by buffering writes. Without extra application effort, the performance increase comes at the expense of reliability and consistency in the presence of failures.
+17. Contiguous file allocation is an allocation strategy suitable for read-only media.
+18. Chained (link-list) file allocation is desirable for file systems that support random-access workloads.
+19. Best-fit memory allocation gives the best result in terms of memory fragmentation.
+20. Swapping allows applications larger than physical memory to execute.
+21. Overlays allow applications larger than physical memory to execute.
+22. With appropriate language and OS support, segmentation can be used for bounds checking array access.
+23. Virtual memory thrashing is where virtual memory translation happens too fast.
+24. Optimal is the best practical page replacement algorithm.
+25. When choosing a victim for page replacement, a clean page is faster to replace than a dirty page.
+26. Increasing the page size generally increases the working set size of an application.
+27. Spatial locality contributes to VM system efficiency, but temporal locality does not.
+28. Adding more levels of I/O buffering always improves performance.
+29. Shortest seek time first is a disk scheduling algorithm that is always fair.
+30. Compared to polled I/O, Interrupt driven I/O is preferable when there is a significant delay between a device request and the device response.
+31. Favouring CPU-bound applications over I/O-bound applications generally improves overall system performance.
+32. Rate-monotonic scheduling can always schedule a task set if the total utilisation is less or equals to 1.
+33. Round robin scheduling can be tuned by varying the time-slice length to trade-off responsiveness for decreased CPU overhead.
+34. Spinlocks can never be more efficient to use than blocking locks, even on a multiprocessor machine.
+35. On a multiprocessor machine, a single ready queue provides automatic load balancing between CPUs.
+36. A read before test and set implementation of a spinlock just adds extra overhead to the lock implementation by adding a superfluous read.
+37. A multiprocessor machine only speeds up parallelisable workloads.
+38. On a processor with a hardware-refilled TLB, the operating system is free to implement the most efficient page table data structure for the expected workload.
+39. Memory compaction can be performed transparently to an application on a machine with base and limit registers.
+40. Page sizes are always a power of 2.
