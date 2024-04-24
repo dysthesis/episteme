@@ -263,7 +263,7 @@ In most UNIX file systems, every file has an index block, called an inode, which
 Assume a block size of 2 kilobytes (2048 bytes) and 4-byte block numbers. What is the largest possible file size support by this filesystem?
 
 #### Answer
-Number of blocks addressable from one block = $2048 / 4 = 512$
+Number of blocks addressable from one block = 2048 / 4 = 512
 
 Direct blocks = 12
 
@@ -276,3 +276,28 @@ Triple indirect blocks = 512**3
 Total blocks = 134480396
 
 Max file size = 134480396 * 2KiB = 256.5GiB
+
+## Question 3
+
+### Part A
+
+#### Question 
+Suppose that the head of a moving-head disk with 192 tracks, numbered 0 to 191, is currently
+Serving a request at track 80 and has just finished a request at track 62. The queue of requests is kept in the FIFO order: 119, 58, 114, 28, 111, 55, 103, 30, 75. What is the total number of tracks traversed by head movements needed to satisfy these requests for the following disk-scheduling algorithms?
+
+I) FCFS.
+Ii) SSTF.
+Iii) Elevator (SCAN).
+Iv) Modified Elevator (C-SCAN).
+
+#### Answer 
+i) 547
+(ii) 143
+(iii) (119 - 80) + (119 - 28) = 130
+(iv) Count the traversal from high to low, (119 - 80) + (119 - 28) + (75 - 28) = 177
+
+### Part B
+
+#### Question 
+User-level threads packages generally implement cooperative scheduling. What is cooperative scheduling, and why is it the common method used to schedule user-level threads?
+
