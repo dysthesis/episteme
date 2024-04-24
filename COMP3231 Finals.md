@@ -187,32 +187,92 @@ Determine whether the statements below are true or false.
 9. Application threading supported by kernel implemented threads (i.e. kernel-level threads) can take advantage of multiple processors if available. **True, the OS can schedule kernel-level threads**
 10. Applications (i.e. user-level code) can synchronise to avoid race conditions by disabling and enabling interrupts. **False, user-level applications can not disable interrupts as this requires privileged mode**
 11. Semaphores can be used to implement mutual exclusion primitives. **True, if initialised to one**
-12. Condition variables are used together with semaphores to manage blocking and waking within the semaphore.
-13. Bankers algorithm can avoid deadlock if the maximum resource requirements of threads are known in advance.
-14. Hold and wait is a practical deadlock prevention strategy.
-15. Sparse files save disk space by not storing the parts of the file that are not written to.
-16. The buffer cache improves write performance by buffering writes. Without extra application effort, the performance increase comes at the expense of reliability and consistency in the presence of failures.
-17. Contiguous file allocation is an allocation strategy suitable for read-only media.
-18. Chained (link-list) file allocation is desirable for file systems that support random-access workloads.
-19. Best-fit memory allocation gives the best result in terms of memory fragmentation.
-20. Swapping allows applications larger than physical memory to execute.
-21. Overlays allow applications larger than physical memory to execute.
-22. With appropriate language and OS support, segmentation can be used for bounds checking array access.
-23. Virtual memory thrashing is where virtual memory translation happens too fast.
-24. Optimal is the best practical page replacement algorithm.
-25. When choosing a victim for page replacement, a clean page is faster to replace than a dirty page.
-26. Increasing the page size generally increases the working set size of an application.
-27. Spatial locality contributes to VM system efficiency, but temporal locality does not.
-28. Adding more levels of I/O buffering always improves performance.
-29. Shortest seek time first is a disk scheduling algorithm that is always fair.
-30. Compared to polled I/O, Interrupt driven I/O is preferable when there is a significant delay between a device request and the device response.
-31. Favouring CPU-bound applications over I/O-bound applications generally improves overall system performance.
-32. Rate-monotonic scheduling can always schedule a task set if the total utilisation is less or equals to 1.
-33. Round robin scheduling can be tuned by varying the time-slice length to trade-off responsiveness for decreased CPU overhead.
-34. Spinlocks can never be more efficient to use than blocking locks, even on a multiprocessor machine.
-35. On a multiprocessor machine, a single ready queue provides automatic load balancing between CPUs.
-36. A read before test and set implementation of a spinlock just adds extra overhead to the lock implementation by adding a superfluous read.
-37. A multiprocessor machine only speeds up parallelisable workloads.
-38. On a processor with a hardware-refilled TLB, the operating system is free to implement the most efficient page table data structure for the expected workload.
-39. Memory compaction can be performed transparently to an application on a machine with base and limit registers.
-40. Page sizes are always a power of 2.
+12. Condition variables are used together with semaphores to manage blocking and waking within the semaphore. **False, condition variables are used in conjunction with _monitors_, or monitor-like lock use (e.g. in OS/161)**
+13. Bankers algorithm can avoid deadlock if the maximum resource requirements of threads are known in advance. **True, although this is not realistic in practice**
+14. Hold and wait is a practical deadlock prevention strategy.**False, in fact hold and wait is one of the four preconditions that leads to deadlock**
+15. Sparse files save disk space by not storing the parts of the file that are not written to. **True, metadata representing the empty blocks can be stored instead**
+16. The buffer cache improves write performance by buffering writes. Without extra application effort, the performance increase comes at the expense of reliability and consistency in the presence of failures. **True, even if the FS remains in a consistent (or recoverable) state, data is still lost**
+17. Contiguous file allocation is an allocation strategy suitable for read-only media. **True, if the file increases in size, re-allocation will be required**
+18. Chained (link-list) file allocation is desirable for file systems that support random-access workloads. **False, Random access in a linked list is very slow so not 'desirable'**
+19. Best-fit memory allocation gives the best result in terms of memory fragmentation. **True, best fit results in the least external fragmentation.**
+20. Swapping allows applications larger than physical memory to execute. **False, swapping _swaps_ the entire application, so it must fit entirely in memory to be present. There is some confusion between swapping versus paging (note linux/windows use the term "swapping" inaccurately). The following link happens to have a nice answer: https://stackoverflow.com/questions/4415254/difference-swapping-and-paging**
+21. Overlays allow applications larger than physical memory to execute. **True, the application controls the overlays**
+22. With appropriate language and OS support, segmentation can be used for bounds checking array access. **True, the OS checks that memory access falls within a segment's boundaries**
+23. Virtual memory thrashing is where virtual memory translation happens too fast. **False, they are two unrelated concepts**
+24. Optimal is the best practical page replacement algorithm. **False, it is not practical**
+25. When choosing a victim for page replacement, a clean page is faster to replace than a dirty page. **True, it doesn't have to be written to disk**
+26. Increasing the page size generally increases the working set size of an application. **True, the larger granularity of inclusion results in more virtual memory being included in the working set when only part of the page is actually accessed.**
+27. Spatial locality contributes to VM system efficiency, but temporal locality does not. **False, the TLB hit rate is higher if entries are reused before they are replaced**
+28. Adding more levels of I/O buffering always improves performance. **False, buffering adds memory copy overhead, which can be significant for fast I/O devices (e.g. multi gigabit networks).**
+29. Shortest seek time first is a disk scheduling algorithm that is always fair. **False, Shortest Seek Time First can cause starvation**
+30. Compared to polled I/O, Interrupt driven I/O is preferable when there is a significant delay between a device request and the device response. **True, otherwise CPU time is wasted polling**
+31. Favouring CPU-bound applications over I/O-bound applications generally improves overall system performance. **False, a combination of I/O-bound and CPU-bound is optimal**
+32. Rate-monotonic scheduling can always schedule a task set if the total utilisation is less or equals to 1. **False, but earliest-deadline-first does, see the example in lectures**
+33. Round robin scheduling can be tuned by varying the time-slice length to trade-off responsiveness for decreased CPU overhead. **True.**
+34. Spinlocks can never be more efficient to use than blocking locks, even on a multiprocessor machine. **False, they can avoid the overhead of context switching to scheduler then another process on a multiprocessor**
+35. On a multiprocessor machine, a single ready queue provides automatic load balancing between CPUs. **True, ready processes are variable to all CPUs**
+36. A read before test and set implementation of a spinlock just adds extra overhead to the lock implementation by adding a superfluous read. **False, reduces bus traffic since the test & set instructions are only applied when they might succeed.**
+37. A multiprocessor machine only speeds up parallelisable workloads. **True.**
+38. On a processor with a hardware-refilled TLB, the operating system is free to implement the most efficient page table data structure for the expected workload. **False, the PT structure must be readable by the hardware refilling the TLB**
+39. Memory compaction can be performed transparently to an application on a machine with base and limit registers. **True, the whole segment can be copied higher or lower in physical memory**
+40. Page sizes are always a power of 2. **True**
+
+## Question 2
+
+### Part A
+
+#### Question
+Consider a demand-paging system with a paging disk that has an average access and transfer time of 5 milliseconds for a single page. Addresses are translated through a page table in main memory, with an access time of 100 nanoseconds per memory access. Thus, each memory reference through the page table takes two accesses. The system has a 48-entry TLB to speed up memory accesses. Assume that 99% of memory accesses result in a TLB hit, and of the remaining 1%, 5 percent (or 0.05% of the total) cause page faults. What is the effective memory access time?
+
+#### Answer
+.99 TLB hits, which needs only a single memory access (the actual one required)
+
+.0095 TLB miss, one read from memory to get the page table entry to load TLB, then one read to read actual memory.
+
+.0005 pagefault plus eventual read from memory plus something like one of the following (I'd take a few variations here)
+
+1. A memory reference to update the page table
+2. A memory reference to update the page table and a memory reference for the hardware to re-read the same entry to refill the TLB
+3. Any reasonable scenario that results in valid page table and refilled TLB.
+
+I'll assume option 2 for final answer
+
+thus
+
+.99 * 100ns + .0095 *2 * 100ns + .0005 (3 * 100ns + 5ms)
+
+would be one answer I would accept.
+
+### Part B
+
+#### Question 
+Some versions of UNIX store the first part of each file in the same disk block as the inode. Discuss why this might be advantageous in practice.
+
+#### Answer 
+Many applications just read the first few bytes of a file, for instance to determine the file's type. If these bytes were not in the same disk block as the inode, then when an application asks to read the start of the file the disk would need to read the block with the inode sending this back to the file system code, which would find out the address of the block with the data, then send another request to the disk. Whereas if the first few bytes were in the block with the inode, then only one request to the disk is needed.
+
+A significant fraction of files are small, thus a significant fraction of files can be stored in the inode entirely - thus reducing/avoiding the need to seek to the inode and then seek to the data - it is all in the inode.
+
+### Part C
+
+#### Question 
+In most UNIX file systems, every file has an index block, called an inode, which is used to store information about the file as well as pointers to data blocks, as shown in the diagram below.
+
+![[Screenshot 2024-04-25 at 08.08.34.png]]
+
+Assume a block size of 2 kilobytes (2048 bytes) and 4-byte block numbers. What is the largest possible file size support by this filesystem?
+
+#### Answer
+Number of blocks addressable from one block = $2048 / 4 = 512$
+
+Direct blocks = 12
+
+Single indirect blocks = 512
+
+Double indirect blocks = 512**2
+
+Triple indirect blocks = 512**3
+
+Total blocks = 134480396
+
+Max file size = 134480396 * 2KiB = 256.5GiB
